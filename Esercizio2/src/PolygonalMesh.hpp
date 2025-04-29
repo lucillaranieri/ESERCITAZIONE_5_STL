@@ -25,7 +25,7 @@ struct PolygonalMesh
 	vector<vector<unsigned int>> Cell2DsVertices;
 	vector<vector<unsigned int>> Cell2DsEdges;
 	
-	//map per conservare i marker, con chiavi = marker e valore = lista 
+	//map serve per conservare i marker, dove chiavi = marker e valore = lista 
 	map<unsigned int, list<unsigned int>> cell0Ds_markers;
     map<unsigned int, list<unsigned int>> cell1Ds_markers;
     map<unsigned int, list<unsigned int>> cell2Ds_markers;

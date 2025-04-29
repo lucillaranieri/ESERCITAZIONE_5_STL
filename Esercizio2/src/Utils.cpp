@@ -8,7 +8,7 @@
 #include <map>
 #include <vector>
 #include <set>
-
+//bool importmesh
 namespace PolygonalLibrary
 {
 bool ImportMesh(PolygonalMesh& mesh)
@@ -26,7 +26,7 @@ bool ImportMesh(PolygonalMesh& mesh)
     return true;
 
 }
-// ***************************************************************************
+// bool importcell0Ds
 bool ImportCell0Ds(PolygonalMesh& mesh)
 {
     ifstream file("./Cell0Ds.csv");
@@ -69,7 +69,7 @@ bool ImportCell0Ds(PolygonalMesh& mesh)
 
         mesh.Cell0DsId.push_back(id);
 
-        /// Memorizza i marker
+        /// serve per memorizzare i map che serve conservare i marker
         map<unsigned int, list<unsigned int>>& m = mesh.cell0Ds_markers;
         if (marker != 0)
 		{
@@ -82,7 +82,7 @@ bool ImportCell0Ds(PolygonalMesh& mesh)
     return true;
 }
 
-// ***************************************************************************
+// bool importcell1Ds
 bool ImportCell1Ds(PolygonalMesh& mesh)
 {
     ifstream file("./Cell1Ds.csv");
@@ -119,7 +119,7 @@ bool ImportCell1Ds(PolygonalMesh& mesh)
         unsigned int id;
         unsigned int marker;
         Vector2i vertices;
-		char elimin; //';' del csv
+		char elimin;           //';' del csv
 
         converter >> id >> elimin >> marker >> elimin >> mesh.Cell1DsExtrema(0, id) >> elimin >> mesh.Cell1DsExtrema(1, id);
 
@@ -137,7 +137,7 @@ bool ImportCell1Ds(PolygonalMesh& mesh)
     return true;
 }
 
-// ***************************************************************************
+// bool importcell2Ds
 bool ImportCell2Ds(PolygonalMesh& mesh)
 {
     ifstream file;

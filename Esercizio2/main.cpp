@@ -18,10 +18,10 @@ int main()
         return 1;
     }
 	
-	//test per verificare che i marker siano apposto ????
+
+
 	
-	
-	//esporto le mesh
+	//utilizzo questi comandi per avere in formato inp i file da dare a paraview e visualizzare i punti (0D) la poligonale (1D)
 	Gedim::UCDUtilities utilities;
 	utilities.ExportPoints("./Cell0Ds.inp", 
 						   mesh.Cell0DsCoordinates);
